@@ -23,9 +23,29 @@ for (let x of suits) {
     // create card object
     const card = { Value: y, Suit: x };
 
+    // create elements for displaying the card
+    const cardDiv = document.createElement("div");
+    cardDiv.textContent = x + " " + y;
+    document.body.appendChild(cardDiv);
+
+    // add the card to the deck array
     deck.push(card);
   }
 }
 // Add Jokers card
-deck.push("Joker 1");
-deck.push("Joker 2");
+
+
+const joker_1 = deck.push("Joker 1");
+const joker_2 = deck.push("Joker 2")
+
+const joker1 = document.createElement("div");
+joker1.innerHTML = "Joker  1";
+document.body.appendChild(joker1);
+
+const joker2 = document.createElement("div");
+joker2.innerHTML = "Joker 2 ";
+document.body.appendChild(joker2)
+
+
+
+// console.log(deck);
